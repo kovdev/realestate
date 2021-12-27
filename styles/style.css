@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  padding-left: 1%;
+}
+.item {
+  top: 0;
+  left: 0;
+  padding: 1%;
+}
+.item img {
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+.item img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+p.chakra-text {
+  margin-bottom: 2%;
+}

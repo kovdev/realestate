@@ -11,8 +11,8 @@ import DefaultImage from '../assets/images/house.jpg'
 
 const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID } }) => (
     <Link href={`/property/${externalID}`} passHref>
-        <Flex flexWrap="wrap" w="420px" p="5" paddingTop="1" justifyContent="flex-start" cursor="pointer" >
-            <Box transition=".2s ease-in-out" _hover={{transform:"scale(1.03)"}}>
+        <Flex class="container" flexWrap="wrap" w="420px" p="5" paddingTop="1" justifyContent="flex-start">
+            <Box class="item">
                 <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt="house" />
             </Box>
             <Box w="full" bg="#dee2e6">
