@@ -3,6 +3,11 @@
   overflow: hidden;
   padding-left: 1%;
 }
+@media screen and (max-width: 1245px) {
+  #bannerFlex {
+    justify-content: center;
+  }
+}
 .item {
   top: 0;
   left: 0;

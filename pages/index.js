@@ -6,7 +6,7 @@ import Property from '../components/Property'
 import { baseUrl, fetchApi } from '../utils/fetchApi'
 
 const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
-  <Flex flexWrap="wrap" justifyContent="flex-start" alignItems="center" m="10">
+  <Flex flexWrap="wrap" justifyContent="flex-start" alignItems="center" m="10" id="bannerFlex">
     <Image src={imageUrl} width={500} height={300} alt="banner" />
     <Box p="5" boxShadow='dark-lg'>
       <Text color="gray.500" fontSize="sm" fontWeight="medium">{purpose}</Text>
@@ -32,9 +32,8 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
-
         />
-      <Flex flexWrap="wrap" boxShadow='lg'>
+      <Flex flexWrap="wrap" boxShadow='lg' justifyContent="center">
         {propertiesForRent.map((property) => <Property property={property} key={property.id}/>)}
       </Flex>
       <Banner 
@@ -47,7 +46,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         linkName="/search?purpose=for-sale"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
         />
-        <Flex flexWrap="wrap" boxShadow='lg'>
+        <Flex flexWrap="wrap" boxShadow='lg' justifyContent="center">
         {propertiesForSale.map((property) => <Property property={property} key={property.id}/>)}
         </Flex>
     </Box>
